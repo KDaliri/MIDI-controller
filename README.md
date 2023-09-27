@@ -13,4 +13,3 @@ As it turns out, some of the best amp sims on the market today are only availabl
 Those that do come in hardware units leave the end user locked into that manufactures ecosystem.
 
 The solution is this: a unit that provides the conveniece of controlling your all favourite amp sims, all from one place.
-

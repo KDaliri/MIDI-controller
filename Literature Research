@@ -1,1 +1,30 @@
+Literature Research
+1. Formulate the research and development question(s)
+
+What will the technical specs be?
+How will we control midi-software?
+How to build a midi-controller?
+
+2. Establish context for your work by showing what has been done within the market 
+can you modify your project so as to reach a "niche" market?
+
+The MIDI-controller is catered to guitar players that want to use AMP sims live.
+
+is there a limitation or constraint that you can address to increase the attractiveness of your product?
+We are trying to address the limitation of being tied down to a certain manufacturer. We are making this controller an open source, making this product cheaper.
+
+3. Expose the gap within current products in meeting the "need" or solving the "problem"
+
+Current products leave you tied into the hardware’s ecosystem which was created by the manufacturer. With our MIDI-controller, we’re making it an open-source product meaning you can have other products from different manufacturers and being able to switch between them “on the fly”
+
+- how does your proposed product solve the issue that much better (is it cheaper? faster? more accurate?)
+
+You’re not tied to the environments sold to the product you’re buying. 
+Not going to be as expensive as others in the market. Since software is already on computer.
+
+4. Refine your "answer" to the "problem"
+
+To be able to seamlessly switch & control different AMPs from different manufacturers
+
+
 

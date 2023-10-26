@@ -34,12 +34,12 @@ https://www.kemper-amps.com/products/en_ca/profiler-stage.html
 These products are commonly referred to as digital amp modelers, or just amp modelers. They are all in one devices consisting of a computer, audio interface, and MIDI controller that come preloaded with a variety of amp sims and fx processors.
 
 
-  can you modify your project so as to reach a "niche" market?
+- can you modify your project so as to reach a "niche" market?
 
 The product is already targeted towards what could be considered a "niche" market.
 
 
-  is there a limitation or constraint that you can address to increase the attractiveness of your product?
+- is there a limitation or constraint that you can address to increase the attractiveness of your product?
 
 Allowing the MIDI controller to seamlessly switch between multiple amp sims on the host computer would be the biggest leap forward in terms of the product's limitations. A constraint to this products sucess would be the number of amp sims available as a standalone application. While running an amp sim as a plugin in a DAW does not change its functionality, running multipule plugins in a DAW will eat up a considerable amount of resources compared to running those same plugins as standalone applications. These factors will determine the overall attractiveness of the product.
 

@@ -15,4 +15,4 @@ and extra controls will be available for assigning to other useful parameters th
 
 The controller will be able to switch between different applications on the host computer without needing to be reconfigured. A visual indicator will let the user keep track of which application is in focus.
 
-The controller will have a footswitch to quickly change setting, toggle an effect, or send any other MIDI event during a live performance. Any change in value is reflected on the associated parameters LED.
+The controller will have a footswitch to recall saved presets, toggle an effect, or send any other MIDI event during a live performance. Any change in value is reflected on the associated parameters LED.

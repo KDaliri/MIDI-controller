@@ -90,17 +90,17 @@ void map2fs(){
     for(checkstate=0;checkstate<2;++checkstate){           //check and save current state of mapable inputs
       pinstate[checkstate]=digitalRead(digiIN[checkstate]);
     }
-    recheck=0; 
-  }                                            //prevents constently updating saved state while waiting for user to map message
-  if(pinstate[0]!=digitalRead(digiIN[0])){               //execute if curernt state of input differs from saved state
-    MIDI.sendControlChange(66,64,1);                     //sends serial MIDI message that corresponds to usbMIDI message from the same input
-    delayMicroseconds(10);                               //works without but helps with consistent detection? experimental
+    recheck=0;                                             //prevents constently updating saved state while waiting for user to map message
+  }
+  if(pinstate[0]!=digitalRead(digiIN[0])){                 //execute if curernt state of input differs from saved state
+    MIDI.sendControlChange(66,64,1);                       //sends serial MIDI message that corresponds to usbMIDI message from the same input
+    delayMicroseconds(10);                                 //works without but helps with consistent detection? experimental
     while(!MIDI.read()){
     //wait for serial MIDI message to be recieved before trying to fetch data. Calling MIDI.read() directly rarely fetches data for some reason
     }
-    value=MIDI.getData1();                                //stores control/program change value
-    fsset=1;                                              //condition to exit loop that calls this function
-    recheck=1;                                            //re-enable checking and saving state of mappable inputs next time this function is called
+    value=MIDI.getData1();                                 //stores control/program change value
+    fsset=1;                                               //condition to exit loop that calls this function
+    recheck=1;                                             //re-enable checking and saving state of mappable inputs next time this function is called
   }
   if(pinstate[1]!=digitalRead(digiIN[1])){
     MIDI.sendControlChange(65,64,1);
@@ -146,7 +146,7 @@ void recall(){
 
 void knobs(){ 
   if(pot>prevpot+1||pot<prevpot-1){             //sensitivity is -1 to +1
-    pot=analogRead(A0)/8;                      //read value again for accuracy
+    pot=analogRead(A0)/8;                       //read value again for accuracy
     usbMIDI.sendControlChange(52,pot,1);
     prevpot=pot;
   }

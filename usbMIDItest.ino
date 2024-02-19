@@ -5,12 +5,12 @@ int preset=1;
 int prevpot=-1;
 
 Bounce stomp=Bounce(9, 5);                    //variables for debouncing. Indicates pin and debounce time in ms
-Bounce toggle=Bounce(25, 7);
+Bounce toggle=Bounce(23, 7);
 
 void setup() {
   // put your setup code here, to run once:
 pinMode(9,INPUT_PULLUP);
-pinMode(25,INPUT_PULLUP);
+pinMode(23,INPUT_PULLUP);
 pinMode(0,OUTPUT);
 pinMode(1,OUTPUT);
 pinMode(2,OUTPUT);

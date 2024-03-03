@@ -26,20 +26,19 @@
 MIDI_CREATE_INSTANCE(HardwareSerial, Serial1, MIDI);  //Serial 1 is assigned, pins 0 and 1
 
 // ******CONSTANT VALUES********
-int value = 0;    //for program mode - J. Alvarz 240301
-int recheck = 1;  //for program mode - J. Alvarz 240301
-int fsset = 0;    //for program mode - J. Alvarz 240301
-int fsVal = 0;    //for program mode - J. Alvarz 240301
+int value = 0;    //for program mode - J. Alvarez 240301
+int recheck = 1;  //for program mode - J. Alvarez 240301
+int fsset = 0;    //for program mode - J. Alvarez 240301
+int fsVal = 0;    //for program mode - J. Alvarez 240301
+int checkstate;   //for program mode - J. Alvarez 240301
 int bank = 0;     //for bank cycling - J. Alvarez 240211
-int checkstate;   //for program mode - J. Alvarz 240301
-
 
 const int channel = 1;       // MIDI channel assignment
 const int A_PINS = 10;       // number of Analog PINS, HEAD UNIT, with bank option
 const int A_ExpPedPINS = 2;  // number of Analog PINS for Expression Pedal MIDI, with bank option
 const int HeadD_PINS = 8;    // number of Digital PINS FOR MIDI, HEAD UNIT with bank option
 const int D_PINS = 8;        // number of Digital PINS FOR MIDI, FOOT SWITCHES with bank option
-bool pinstate[D_PINS];       //for program mode - J. Alvarz 240301
+bool pinstate[D_PINS];       //for program mode - J. Alvarez 240301
 
 const int ON_VELOCITY = 99;  // note-one velocity sent from buttons (should be 65 to  127)
 

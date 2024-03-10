@@ -24,8 +24,8 @@ bool PC_mode[2][d_pins];  // indicates if saved MIDI message is CC or PC on foot
 
 //const int analogPin[a_pins] = {A0, A1, A2, A3, A4, A5, A6, A7, A8, A9};  //---Knobs Assignment 240301
 //const int fs_analogPin[a_fsPins] = {A12, A13};                      //---Expression Pedal Assignment 240301
-const byte digitalPin[d_pins] = {1, 2, 30, 4, 5, 6};    // digital pins for the head unit
-const byte fs_digitalPin[d_pins] = {28, 29, 3, 31, 32, 33};   // digital pins for the footswitch unit
+const byte digitalPin[d_pins] = {1, 2, 3, 4, 5, 6};    // digital pins for the head unit
+const byte fs_digitalPin[d_pins] = {28, 29, 30, 31, 32, 33};   // digital pins for the footswitch unit
 
 // Knobs MIDI CC assignment, per bank
 /*const byte CC_knob[2][a_pins] = {

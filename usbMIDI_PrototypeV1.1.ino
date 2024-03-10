@@ -188,6 +188,7 @@ void map2fs() {
     }
 
     progMode.update();    // update state of programming mode toggle
+    
     if (progMode.risingEdge()) {    // programming mode toggled
       fsValue[oldBank][progPin] = oldPin;   // enures initial MIDI message is still programmed
       PC_mode[oldBank][progPin] = oldMode;    // ensures initial PC_mode state is not overwritten
@@ -217,10 +218,10 @@ void map2fs() {
 void switches() {
   for (checkState = 0; checkState < d_pins; checkState++) {
     toggle[checkState].update();    // update state of switches on the head unit
+    
     if (toggle[checkState].fallingEdge()) {   // switch on head unit toggled
       usbMIDI.sendControlChange(CC_toggle[bank][checkState], on_velocity, channel);   // send CC message of toggled switch from active bank
     }
-    // Note Off messages when each button is released
     if (toggle[checkState].risingEdge()) {    // switch on head unit toggled
       usbMIDI.sendControlChange(CC_toggle[bank][checkState], off_velocity, channel);    // send CC message of toggled switch from active bank
     }
@@ -231,6 +232,7 @@ void switches() {
 void fs_switches() {
   for (checkState = 0; checkState < d_pins; checkState++) {
     footswitch[checkState].update();    // update state of switches on the footswitch unit
+    
     if (footswitch[checkState].fallingEdge()) {   // switch on footswitch unit toggled
       if (PC_mode[bank][checkState] == true) {    // indicate saved MIDI message is PC
         usbMIDI.sendProgramChange(fsValue[bank][checkState], channel);  // send PC message of toggled switch from active bank
@@ -239,7 +241,6 @@ void fs_switches() {
         usbMIDI.sendControlChange(fsValue[bank][checkState], on_velocity, channel);   // send CC message of toggled switch from active bank
       }
     }
-    // Note Off messages when each button is released
     if (footswitch[checkState].risingEdge()) {    // switch on footswitch unit toggled
       if (PC_mode[bank][checkState] == true) {    // indicate saved MIDI message is PC
         usbMIDI.sendProgramChange(fsValue[bank][checkState], channel);    // send PC message of toggled switch from active bank
@@ -254,6 +255,7 @@ void fs_switches() {
 /*******BANK SELECTION********/
 void selectBank() {
   setBank.update();   // update state of switches on the footswitch unit
+  
   if (setBank.fallingEdge()) {    // bank select toggled
     bank = 1;   // bank 2 active
   }

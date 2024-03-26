@@ -108,11 +108,11 @@ int horizontal = 0;
 int screensizeX = 1920;
 int screensizeY = 1080;
 
-long unsigned int responsedelay = 5;
+long unsigned int responsedelay = 20;
 elapsedMillis moveDelay;
 // parameters for reading the thumbstick
-int cursorSpeed = 30;             // output speed of X or Y movement or sensitivity
-int threshold = cursorSpeed / 4;  // resting threshold
+int cursorSpeed = 40;             // output speed of X or Y movement or sensitivity
+int threshold = cursorSpeed / 20;  // resting threshold
 int center = cursorSpeed / 2;     // resting position value
 
 /*************SETUP AND MAIN LOOP*************/
